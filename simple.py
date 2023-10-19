@@ -17,6 +17,6 @@ html = produce_scattertext_html(corpus,
                                     not_category_name='Republican',
                                     minimum_term_frequency=5,
                                     #pmi_filter_thresold=4,
-                                    width_in_pixels=1000)
+                                    width_in_pixels=1000,height_in_pixels=1200)
 open('./simple.html', 'wb').write(html.encode('utf-8'))
 print('Open ./simple.html in Chrome or Firefox.')
