@@ -4,7 +4,8 @@ from copy import copy
 import numpy as np
 import pandas as pd
 import scipy
-from pandas.core.common import SettingWithCopyWarning
+#from pandas.core.common import SettingWithCopyWarning
+from pandas.errors import SettingWithCopyWarning
 from scipy.sparse import csr_matrix
 from scipy.stats import hmean, fisher_exact, rankdata, norm
 from sklearn.feature_extraction.text import TfidfTransformer

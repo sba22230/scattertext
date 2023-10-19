@@ -51,7 +51,8 @@ class SentencesForTopicModeling(object):
 			self,
 			pipe=Pipeline([
 				('tfidf', TfidfTransformer(sublinear_tf=True)),
-				('nmf', (NMF(n_components=30, alpha=.1, l1_ratio=.5, random_state=0)))]),
+#				('nmf', (NMF(n_components=30, alpha=.1, l1_ratio=.5, random_state=0)))]), alpha is no longer in NMF
+				('nmf', (NMF(n_components=30, alpha_W=.1, l1_ratio=.5, random_state=0)))]),
 			num_terms_per_topic=10):
 		'''
 
